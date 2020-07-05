@@ -1,23 +1,33 @@
 <template>
-  <v-card id="drawer">
-    <v-navigation-drawer v-model="drawer" :mini-variant.sync="mini" permanent expand-on-hover>
-      <v-list-item id="toptitle">
-        <v-title style="color:DimGray">COVID19</v-title>
-        <v-subtitle style="color:RoyalBlue">India</v-subtitle>
-      </v-list-item>
-      <v-list id="listItems" style="margin:2px">
-        <v-list-item v-for="item in items" :key="item.title" link>
-          <v-list-item-icon id="title">
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content id="title">
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-          <br />
+  <div>
+    <v-card id="drawer">
+      <v-navigation-drawer
+        v-model="drawer"
+        :mini-variant.sync="mini"
+        permanent
+        expand-on-hover
+      >
+        <v-list-item id="toptitle">
+          <v-title style="color:DimGray">COVID19</v-title>
+          <v-subtitle style="color:RoyalBlue">India</v-subtitle>
         </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-  </v-card>
+        <v-list id="listItems" style="margin:2px">
+          <v-list-item v-for="item in items" :key="item.title" link>
+            <v-list-item-icon id="title">
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content id="title">
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
+            <br />
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+    </v-card>
+    <div>
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 <script>
 export default {
