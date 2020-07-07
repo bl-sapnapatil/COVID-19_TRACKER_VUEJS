@@ -1,11 +1,11 @@
 <template>
-  <div class="header">
-    <div class="label">
+  <div class="homeleft">
+    <div>
       <v-chip class="ma-2">
         Search your city, resources, etc
       </v-chip>
     </div>
-    <div class="search">
+    <div>
       <v-text-field
         prepend-inner-icon="mdi-magnify"
         class="ma-2"
@@ -18,10 +18,10 @@
       >
       </v-text-field>
     </div>
-    <div class="statusCards">
+    <div>
       <v-container>
-        <v-layout row wrap>
-          <v-flex xs6 sm4 md2 lg2 v-for="card in n" :key="card">
+        <v-layout >
+          <v-flex xs6 sm4 md2 lg3 v-for="card in n" :key="card">
             <v-card class="ma-2">
               <v-card-title class="headline">Type</v-card-title>
               <v-card-subtitle>
@@ -45,5 +45,6 @@ export default {
   }
 };
 </script>
-
-<style></style>
+<style lang="scss" scoped>
+@import "../style/Home.scss";
+</style>

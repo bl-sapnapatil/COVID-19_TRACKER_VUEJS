@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <v-card id="drawer">
-      <v-navigation-drawer
+  <v-app>
+      <v-navigation-drawer id="drawer"
+        fixed permanent clipped
         v-model="drawer"
-        :mini-variant.sync="mini"
-        permanent
+        :width="300"
+        :mini-variant-width="75"
         expand-on-hover
       >
         <v-list-item id="toptitle">
@@ -23,53 +23,29 @@
           </v-list-item>
         </v-list>
       </v-navigation-drawer>
-    </v-card>
-    <div>
-      <router-view></router-view>
-    </div>
-  </div>
+          <router-view></router-view>
+  </v-app>
 </template>
 <script>
 export default {
+  name:"SideBar",
   data() {
     return {
       drawer: true,
       items: [
         { title: "Home", icon: "mdi-36px mdi-home-outline" },
-        {
-          title: "Demographics",
-          icon: "mdi-36px mdi-account-multiple-outline"
-        },
-        { title: "Essentials", icon: "mdi-36px mdi-cube-outline" },
-        { title: "About", icon: "mdi-36px mdi-help-circle-outline" },
         { title: "Blog", icon: "mdi-36px mdi-book-open-page-variant" },
+        { title: "About", icon: "mdi-36px mdi-help-circle-outline" },
         {
           title: "A crowdresourced inititative",
-          icon: "mdi-36px mdi-checkbox-multiple-blank-circle-outline"
-        }
+          icon: "mdi-36px mdi-checkbox-multiple-blank-circle-outline",
+        },
       ],
-      mini: true
+      mini: true,
     };
-  }
+  },
 };
 </script>
-<style lang="stylus" scoped>
-#drawer {
-  font-family: 'Varela Round';
-  color: #2c3e50;
-  height: 100%;
-  font-weight: bold;
-  font-color: DimGray;
-}
-
-#title {
-  color: DimGray;
-}
-
-#toptitle {
-  margin-top: 20px;
-  color: #e;
-  font-size: 8px;
-  font-weight: bold;
-}
+<style lang="scss" scoped>
+@import "../style/SideBar.scss";
 </style>

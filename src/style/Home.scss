@@ -1,0 +1,42 @@
+.homeleft{
+    width :100%;
+    font-family: 'Varela Round';
+    margin-top: 5%;
+    float: left;
+    margin-left:15%;
+  }
+
+  #homeright{
+    font-family: 'Varela Round';
+    width :54%;
+    float: right;
+    margin-top:2%;
+    margin-right :5%;
+    }
+    .map{
+      margin-top :20px;
+    }
+   .md-menu {
+      margin: 24px;
+    }
+    .background{
+      background-color :#FFFF;
+      font-family :'Varela Round';
+    }
+    .indiaButton{
+      font-weight :bold;
+      font-size :50px;
+      font-family :'Varela Round';
+    }
+    .myDropDown 
+    {
+     height: 50px;
+     overflow-y: auto;
+    }
+
+  #homeleft{
+    float: left;
+}
+#homeright{
+    float: right;
+}

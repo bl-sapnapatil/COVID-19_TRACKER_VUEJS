@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Dashboard from "../components/SideBar.vue";
-import StateCards from "../components/StateCards.vue";
+import Dashboard from "../components/SideBar";
+import Home from "../components/Home.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -12,11 +12,11 @@ const routes = [
     children: [
       {
         path: "",
-        name: "StateCards",
-        component: StateCards
+        name: "Home",
+        component: Home
       }
     ]
-  }
+  },
 ];
 
 const router = new VueRouter({
