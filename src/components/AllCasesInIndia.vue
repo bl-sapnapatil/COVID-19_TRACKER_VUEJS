@@ -3,28 +3,20 @@
     <div class="indiaButton">
       <v-menu class="myDropDown">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn text v-bind="attrs" v-on="on">
-            India
-          </v-btn>
+          <v-btn text v-bind="attrs" v-on="on">India</v-btn>
         </template>
         <v-list>
-          <v-list-item
-            v-for="(item, index) in items"
-            :key="index"
-            v-on@click=""
-          >
-            <v-list-item-title >{{
-              item.title
-            }}</v-list-item-title>
+          <v-list-item v-for="(item, index) in items" :key="index" v-on@click>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
     </div>
     <div class="map">
       <v-flex xs6 sm1 md10 lg12>
-         <v-card flat>
-        <img src="../assets/Map.jpeg" width="110%" height="110%" />
-      </v-card>
+        <v-card flat>
+          <img src="../assets/Map.jpeg" width="110%" height="110%" />
+        </v-card>
       </v-flex>
     </div>
   </div>
@@ -69,11 +61,11 @@ export default {
       { title: "Daman and Diu" },
       { title: "Delhi" },
       { title: "Lakshadweep" },
-      { title: "Pondecherry" },
-    ],
-  }),
+      { title: "Pondecherry" }
+    ]
+  })
 };
 </script>
 <style lang="scss" scoped>
-@import "../style/Home.scss";
+@import "../scss/Home.scss";
 </style>
