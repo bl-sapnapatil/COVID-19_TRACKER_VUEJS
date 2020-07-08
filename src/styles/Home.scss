@@ -3,11 +3,38 @@
 .homeleft {
   width: 100%;
   font-family: "Varela Round";
-  margin-top: 5%;
+  margin-top: 10%;
   float: left;
-  margin-left: 15%;
+  margin-left: 35%;
 }
+.searchTitle{
+  color: $dimGray;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3%;
+  font-weight: 300;
+}
+.searchDiv{
+  border: none;
+  outline: none;
+  background: $white;
+  height: 58px;
+  margin-left: 5%;
+  width: 90%;
+  box-shadow: 2px 5px 10px $dimGray;
+  margin-bottom: 5%;
 
+}
+.search{
+  border: none;
+  outline: none;
+  background: $white;
+  height: 40px;
+  /* width:500px; */
+  padding-top: 3%;;
+  padding-left: 1%;
+  font-size: 15px;
+}
 #homeright {
   font-family: "Varela Round";
   width: 54%;

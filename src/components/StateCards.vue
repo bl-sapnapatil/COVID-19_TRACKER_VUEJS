@@ -1,19 +1,19 @@
 <template>
   <div class="homeleft">
-    <div>
-      <v-chip class="ma-2">Search your city, resources, etc</v-chip>
-    </div>
-    <div>
-      <v-text-field
+    <div class="searchTitle">Search your district or state</div>
+    <!-- <v-text-field
         prepend-inner-icon="mdi-magnify"
         class="ma-2"
         flat
-        outlined
         dense
         hide-details
         placeholder="Search"
         autocomplete="off"
-      ></v-text-field>
+    ></v-text-field>-->
+    <div class="searchDiv">
+      <!-- <v-icon>fas fa-search</v-icon> -->
+      <img style="padding-left:1%" src="../assets/searchIcon.png" />
+      <input class="search" placeholder="Search" autocomplete="off" />
     </div>
     <div>
       <v-container>
