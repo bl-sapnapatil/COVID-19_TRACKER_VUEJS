@@ -1,19 +1,19 @@
+@import '../scss/colors.scss';
+
 #drawer {
     font-family: 'Varela Round';
-    color: #2c3e50;
     font-weight: bold;
-    color: DimGray;
+    color: $dimGray;
   }
   #title {
-    color: #717171;
+    color: $dimGray;
   }
   #subtitle{
-    color: blue
+    color: $blue
   }
   #toptitle {
     margin-top: 20px;
-    color:  DimGray;
-    // font-size: 8px;
+    color: $dimGray;
     font-weight: bold;
   }
  ::v-deep .v-navigation-drawer__content {

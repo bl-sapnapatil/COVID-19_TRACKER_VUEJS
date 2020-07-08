@@ -52,5 +52,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../scss/SideBar.scss";
+@import "../styles/SideBar.scss";
 </style>
