@@ -1,0 +1,24 @@
+@import '../scss/colors.scss';
+
+*{
+  font-family :'Varela Round';
+}
+body {
+  background: $white;
+}
+.container {
+  width: 90%;
+  margin: 50px auto;
+}
+.row {
+  flex-direction: row;
+  justify-content: space-around;
+}
+.card {
+  width:550px;
+  margin: 20px;
+  background:$white
+}
+.card:hover {
+  transform: scale(1.010);
+}

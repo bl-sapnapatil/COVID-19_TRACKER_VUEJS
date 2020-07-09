@@ -213,5 +213,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../scss/Home.scss";
+@import "../styles/IndiaMap.scss";
 </style>

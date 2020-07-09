@@ -1,0 +1,20 @@
+@import '../scss/colors.scss';
+
+*{
+  font-family :'Varela Round';
+}
+
+p span {
+  display: block;
+}
+.map{
+  margin-top: 10%;
+}
+path:hover {
+  fill: $dim-red;
+  stroke: $white;
+}
+svg{
+  fill:#B0E0E6;
+  stroke:$white
+}

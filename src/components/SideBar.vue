@@ -16,7 +16,7 @@
       <v-list-item>
         <v-subtitle class="subtitle">INDIA</v-subtitle>
       </v-list-item>
-      <v-list class="listItems" >
+      <v-list >
         <v-list-item v-for="item in items" :key="item.title" link>
           <v-list-item-icon class="title">
             <v-icon>{{ item.icon }}</v-icon>
@@ -51,5 +51,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../scss/SideBar.scss";
+@import "../styles/SideBar.scss";
 </style>

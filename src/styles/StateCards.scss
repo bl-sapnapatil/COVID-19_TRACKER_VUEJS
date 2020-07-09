@@ -1,0 +1,71 @@
+@import '../scss/colors.scss';
+
+*{
+  font-family :'Varela Round';
+}
+body {
+  background: $white;
+}
+.searchTitle{
+  color: $dimGray;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3%;
+}
+.searchDiv{
+  background: $white;
+  height: 58px;
+  margin-left: 5%;
+  width: 90%;
+  box-shadow: 1px 1px 2px 1px $dimGray;
+  margin-bottom: 4%;
+}
+.search{
+  background: $white;
+  height: 40px;
+  padding-top: 3%;
+  padding-left: 2%;
+  font-size: 15px;
+}
+.main-overview {
+  padding: 20px;
+  margin-top: 22px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 7fr));
+  grid-gap: 4px;
+}
+.confirmed  {
+  border-radius: 5px;
+  display: flex;
+  background-color: $dim-red;
+}
+.active  {
+  border-radius: 5px;
+  display: flex;
+  background-color: $light-blue;
+}
+.recovered  {
+  border-radius: 5px;
+  display: flex;
+  background-color: $light-green;
+}
+.deceased  {
+  border-radius: 5px;
+  display: flex;
+  background-color: $dimgray;
+}
+p span {
+  display: block;
+}
+.map{
+  margin-top: 10%;
+}
+path:hover {
+  fill: $dim-red;
+  stroke: $white;
+}
+svg{
+  fill:#B0E0E6;
+  stroke:$white
+}

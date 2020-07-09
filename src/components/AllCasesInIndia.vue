@@ -20,7 +20,7 @@
     <div>
       <h6 class="lastupdated">Last Updated {{ date }}</h6>
     </div>
-    <v-divider style="margin:10px"></v-divider>
+    <v-divider ></v-divider>
     <div class="lastupdated">
       <h3>India</h3>
       <span>Total Cases :: </span>
@@ -50,5 +50,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../scss/Home.scss";
+@import "../styles/AllCasesInIndia.scss";
 </style>
