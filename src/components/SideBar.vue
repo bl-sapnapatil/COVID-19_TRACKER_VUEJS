@@ -1,30 +1,29 @@
 <template>
   <v-app>
     <v-navigation-drawer
-      id="drawer"
+      class="drawer"
       fixed
-      permanent
       clipped
+      permanent
       v-model="drawer"
-      :width="350"
-      :mini-variant-width="100"
+      :width="310"
+      :mini-variant-width="90"
       expand-on-hover
     >
-      <v-list-item id="toptitle">
-        <v-title id="title">COVID19</v-title>
+      <v-list-item class="toptitle">
+        <v-title class="title">COVID19</v-title>
       </v-list-item>
       <v-list-item>
-        <v-subtitle id="subtitle">INDIA</v-subtitle>
+        <v-subtitle class="subtitle">INDIA</v-subtitle>
       </v-list-item>
-      <v-list id="listItems" style="margin:2px">
+      <v-list class="listItems" >
         <v-list-item v-for="item in items" :key="item.title" link>
-          <v-list-item-icon id="title">
+          <v-list-item-icon class="title">
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
-          <v-list-item-content id="title">
+          <v-list-item-content class="title">
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
-          <br />
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -52,5 +51,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../styles/SideBar.scss";
+@import "../scss/SideBar.scss";
 </style>

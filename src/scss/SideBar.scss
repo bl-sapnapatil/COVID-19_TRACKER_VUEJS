@@ -1,0 +1,26 @@
+@import './colors.scss';
+
+$margin-top:25px;
+$drawer-height:100%;
+.drawer {
+  font-family: 'Varela Round';
+  font-weight: bold;
+  color: $dimGray;
+}
+.title {
+  color: $dimGray;
+}
+.subtitle{
+  color: $blue
+}
+.toptitle {
+  margin-top: $margin-top;
+
+}
+::v-deep .v-navigation-drawer__content {
+  height: $drawer-height;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background-color: $white;
+}

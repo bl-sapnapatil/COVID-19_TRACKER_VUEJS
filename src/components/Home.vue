@@ -1,24 +1,28 @@
 <template>
-  <div>
-    <div id="homeleft">
-      <HomeLeft />
-    </div>
-    <div id="homeright">
-      <HomeRight />
+<div class="container">
+    <div class="row">
+      <div class="card">
+        <div class="card-body">
+          <Main />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+           <MainSide />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script>
-import HomeLeft from "./StateCards";
-import HomeRight from "./AllCasesInIndia";
+import Main from "./StateCards"
+import MainSide from "./AllCasesInIndia"
 export default {
-  name: "Home",
-  components: {
-    HomeLeft,
-    HomeRight
+  components:{
+    Main, MainSide
   }
-};
+}
 </script>
 <style lang="scss" scoped>
-@import "../styles/Home.scss";
+@import "../scss/Home.scss";
 </style>
