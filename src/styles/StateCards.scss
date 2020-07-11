@@ -1,7 +1,13 @@
 @import '../scss/colors.scss';
+@import '../scss//mixins.scss';
 
+@font-face {
+  font-family :'Archia-Regular';
+  src: url('../../public/fonts/Archia-Regular.woff');
+}
 *{
-  font-family :'Varela Round';
+  font-family :'Archia-Regular';
+  font-weight: 1200;
 }
 body {
   background: $white;
@@ -11,21 +17,29 @@ body {
   display: flex;
   justify-content: center;
   padding-bottom: 3%;
+  border: none;
+  outline: none;
 }
 .searchDiv{
+  border-radius: 7px;
   background: $white;
   height: 58px;
   margin-left: 5%;
   width: 90%;
-  box-shadow: 1px 1px 2px 1px $dimGray;
+  box-shadow: 1px 1px 1px 1px $dimGray;
   margin-bottom: 4%;
+  border: none;
+  outline: $white;
 }
 .search{
+  
   background: $white;
   height: 40px;
   padding-top: 3%;
   padding-left: 2%;
   font-size: 15px;
+  border: none;
+  outline: none;
 }
 .main-overview {
   padding: 20px;
@@ -36,36 +50,51 @@ body {
   grid-gap: 4px;
 }
 .confirmed  {
-  border-radius: 5px;
-  display: flex;
+  @include PatientCountCard;
+  color: $red;
   background-color: $dim-red;
 }
 .active  {
-  border-radius: 5px;
-  display: flex;
+  @include PatientCountCard;
+  color: $blue;
   background-color: $light-blue;
 }
 .recovered  {
-  border-radius: 5px;
-  display: flex;
+  @include PatientCountCard;
+  color: $green;
   background-color: $light-green;
 }
 .deceased  {
-  border-radius: 5px;
-  display: flex;
+  @include PatientCountCard;
+  color: $gray;
   background-color: $dimgray;
+}
+.tablerow{
+  :hover{
+    background-color: $whiteSmoke;
+  }
+}
+.count{
+  font-size: 20px;
 }
 p span {
   display: block;
 }
-.map{
-  margin-top: 10%;
+.tableContainer{
+  transition: all 600ms ease-in-out 50ms;
+  width: 550px;
+  overflow-x: auto;
 }
-path:hover {
-  fill: $dim-red;
-  stroke: $white;
+.trend{
+  margin-top: 20px;
+  padding: 3px;
 }
-svg{
-  fill:#B0E0E6;
-  stroke:$white
+.stateName{
+  background-color: $whiteSmoke;
+  @include tableCard;
+  width: 120px;
+}
+.confirmCount, .activeCount, .recoveredCount, .deceasedCount, .totalCount{
+  width: 80px;
+  @include tableCard;
 }

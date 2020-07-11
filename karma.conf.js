@@ -1,11 +1,11 @@
 module.exports = function (config) {
 	config.set({
-		browsers: ['Chrome', 'Firefox', 'IE'],
+		browsers: ['Chrome'],
 		frameworks: ['browserify', 'jasmine'],
 		files: [
 			// 'node_modules/@babel/polyfill/dist/polyfill.js',
 			// 'test/unit/Utils.spec.js'
-			'test/unit/**/*.js'
+			'test/unit/**.js'
 		],
 		reporters: ['spec'],
 		preprocessors: {

@@ -1,9 +1,13 @@
 @import '../scss/colors.scss';
 
-*{
-  font-family :'Varela Round';
+@font-face {
+  font-family :'Archia-Regular';
+  src: url('../../public/fonts/Archia-Regular.woff') format('woff');
 }
-
+*{
+  font-family :'Archia-Regular';
+  font-weight: 1000;
+}
 p span {
   display: block;
 }
@@ -17,4 +21,11 @@ path:hover {
 svg{
   fill:#B0E0E6;
   stroke:$white
+}
+.state-cases h3, h4 {
+  color: darkslateblue;
+}
+.state-cases h5{
+  color: cadetblue;
+  margin-bottom: 20px;
 }

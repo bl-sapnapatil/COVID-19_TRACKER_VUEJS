@@ -11,7 +11,7 @@
       expand-on-hover
     >
       <v-list-item class="toptitle">
-        <v-title class="title">COVID19</v-title>
+        <v-title class="subtitle">COVID19</v-title>
       </v-list-item>
       <v-list-item>
         <v-subtitle class="subtitle">INDIA</v-subtitle>

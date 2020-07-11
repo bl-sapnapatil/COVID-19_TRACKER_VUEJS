@@ -1,0 +1,13 @@
+@import './colors.scss';
+
+@mixin PatientCountCard {
+    border-radius: 7px;
+    display: flex;
+    padding-top: 10%;
+    justify-content: center;
+}
+@mixin tableCard {
+    padding: 8px;
+    margin:3px;
+    background-color: $ivory;
+}

@@ -1,20 +1,24 @@
 @import '../scss/colors.scss';
 
-*{
-  font-family :'Varela Round';
+@font-face{
+  font-family :'Archia-Regular';
+  src: url('../../public/fonts/Archia-Regular.woff') format('woff');
 }
-
+*{
+  font-family :'Archia-Regular';
+  font-weight: 1000;
+}
 .md-menu {
   margin: 10%;
-}
-.indiaButton{
-  font-weight :bold;
 }
 .v-list {
   height: 300px;
   overflow-y: auto;
 }
 .lastupdated{
-  margin-left: 22px;
+  margin-left:22px;
+  margin-bottom:20px;
 }
-
+.indiamap{
+  margin:22px
+}

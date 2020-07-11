@@ -1,16 +1,10 @@
-function sumOfThreeNumbers(firstNumber, secondNumber, thirdNumber) {
-	return firstNumber + secondNumber + thirdNumber;
+function sumOfThreeNumbers(num1, num2, num3) {
+	return num1 + num2 + num3;
 }
-
-describe('Sum should', function(){
-	it('return 6 given 1, 2, 3 as inputs', function(){
-		// Arrange
-		var numbers = [1, 2, 3];
-
-		// Act
-		var actualResult = sumOfThreeNumbers(...numbers);
-
-		// Assert
-		expect(actualResult).toEqual(6);
+describe('Checking Sum of Givern Numbers',() =>{
+	it('when we give three number it should return addition is equal to given number',() =>{
+		var numbers = [100,150,250];
+		var result = sumOfThreeNumbers(...numbers);
+		expect(result).toEqual(500);
 	});
 });

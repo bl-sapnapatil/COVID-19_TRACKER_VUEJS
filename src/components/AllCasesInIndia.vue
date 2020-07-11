@@ -18,21 +18,17 @@
       </v-menu>
     </div>
     <div>
-      <h6 class="lastupdated">Last Updated {{ date }}</h6>
+      <h5 class="lastupdated">Last Updated {{ date }}</h5>
     </div>
-    <v-divider ></v-divider>
-    <div class="lastupdated">
-      <h3>India</h3>
-      <span>Total Cases :: </span>
-    </div>
-    <div class="map">
+    <v-divider class="divider"></v-divider>
+    <div class="indiamap">
       <Map />
     </div>
   </div>
 </template>
 <script>
 import Map from './IndiaMap'
-import stateJson from '../data/states.json'
+import stateNames from '../data/states.json'
 export default {
   name: "AllCasesInIndia",
   components:{
@@ -41,7 +37,7 @@ export default {
   data() {
     return {
       date: "",
-      items: stateJson,
+      items: stateNames,
     };
   },
   mounted() {

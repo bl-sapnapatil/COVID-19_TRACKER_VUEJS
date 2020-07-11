@@ -5,7 +5,10 @@ import store from "./store";
 import vuetify from "./plugins/vuetify";
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
+import Trend from 'vuetrend';
 
+Vue.use(Trend);
+require('dotenv').config()
 Vue.use(VueMaterial)
 Vue.config.productionTip = false;
 

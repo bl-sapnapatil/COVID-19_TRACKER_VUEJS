@@ -1,11 +1,16 @@
 @import '../scss/colors.scss';
 
+@font-face {
+  font-family :'Archia-Regular';
+  src: url('../../public/fonts/Archia-Regular.woff') format('woff');
+}
 *{
-  font-family :'Varela Round';
+  font-family :'Archia-Regular';
+  font-weight: 1000;
 }
 .drawer {
   font-weight: bold;
-  color: $dimGray;
+  color: $ivory;
 }
 .title {
   color: $dimGray;
