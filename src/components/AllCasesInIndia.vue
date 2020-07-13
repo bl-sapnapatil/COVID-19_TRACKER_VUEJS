@@ -1,5 +1,6 @@
 <template>
   <div class="homeright">
+    <h1>{{ msg }}</h1>
     <div class="indiaButton">
       <v-menu class="myDropDown">
         <template v-slot:activator="{ on, attrs }">
@@ -37,6 +38,7 @@ export default {
   data() {
     return {
       date: "",
+      //msg: 'Welcome to Your Vue.js App',
       items: stateNames,
     };
   },

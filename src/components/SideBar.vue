@@ -3,10 +3,9 @@
     <v-navigation-drawer
       class="drawer"
       fixed
-      clipped
       permanent
       v-model="drawer"
-      :width="310"
+      :width="350"
       :mini-variant-width="90"
       expand-on-hover
     >

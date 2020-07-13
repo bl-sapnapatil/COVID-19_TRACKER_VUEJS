@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Dashboard from "../components/SideBar";
 import Home from "../components/Home.vue";
+
 Vue.use(VueRouter);
 
 const routes = [

@@ -7,10 +7,10 @@
 }
 *{
   font-family :'Archia-Regular';
-  font-weight: 1200;
+  font-weight: 12                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       00;
 }
 body {
-  background: $white;
+  background: $white;                                                                                                           
 }
 .searchTitle{
   color: $dimGray;
@@ -23,16 +23,15 @@ body {
 .searchDiv{
   border-radius: 7px;
   background: $white;
-  height: 58px;
+  height: 58px;                                                                                                                                                                                                                                                                                                   
   margin-left: 5%;
   width: 90%;
   box-shadow: 1px 1px 1px 1px $dimGray;
   margin-bottom: 4%;
-  border: none;
-  outline: $white;
+  border: none;                                                                     
+  outline: $white;                                                                                                                                                                                      
 }
-.search{
-  
+.search{                                                                                                                                                                                                                                                                                                                                                                                                                                            
   background: $white;
   height: 40px;
   padding-top: 3%;
@@ -40,6 +39,15 @@ body {
   font-size: 15px;
   border: none;
   outline: none;
+}
+.showdatetime{
+  color: $gray;
+  margin-left: 35%;
+}
+.iconsontable{
+  padding: 5px;
+  margin-left: 15px;
+  background-color: $dimgray;
 }
 .main-overview {
   padding: 20px;
@@ -52,49 +60,116 @@ body {
 .confirmed  {
   @include PatientCountCard;
   color: $red;
-  background-color: $dim-red;
+
+  :hover{
+    border-radius: 7px;
+    background-color: $dim-red;
+  }
 }
 .active  {
   @include PatientCountCard;
   color: $blue;
-  background-color: $light-blue;
+  :hover{
+    border-radius: 7px;
+    background-color: $light-blue;
+  }
 }
 .recovered  {
   @include PatientCountCard;
   color: $green;
-  background-color: $light-green;
+  :hover{
+    border-radius: 7px;
+    background-color: $light-green;
+  }
 }
 .deceased  {
   @include PatientCountCard;
   color: $gray;
-  background-color: $dimgray;
-}
-.tablerow{
   :hover{
-    background-color: $whiteSmoke;
+    border-radius: 7px;
+    background-color: $dimgray;
   }
 }
+.cardtag{
+  padding: 12px;
+  font-size: 12px;
+}
 .count{
-  font-size: 20px;
+  padding-top: 7px;
+  font-size: 25px;
 }
 p span {
   display: block;
 }
+.helptable{
+  padding: 10px;
+  margin-left: 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: $light-gray;
+  width: 50%;
+}
 .tableContainer{
+  color: $dimgray;
   transition: all 600ms ease-in-out 50ms;
   width: 550px;
   overflow-x: auto;
 }
+.tabletitles{
+  margin-top: 20px;
+  margin-left: 13px;
+}
+.tabletitlestate{
+  margin: 2px;
+  padding: 8px;
+  padding-right: 51px;
+  border-radius: 3px;
+  background-color: $light-gray;
+  color: $dimGray;
+}
+.tabletitleC, .tabletitleA, .tabletitleR, .tabletitleD, .tabletitleT{
+  width: 50px;
+  padding: 8px;
+  margin: 2px;
+  padding-left: 58px;
+  color: $dimGray;
+  background-color: $light-gray;
+  border-radius: 3px;
+}
 .trend{
   margin-top: 20px;
   padding: 3px;
+  padding-bottom: 20px;
 }
 .stateName{
-  background-color: $whiteSmoke;
+  color: $dimGray;
   @include tableCard;
-  width: 120px;
+  width: 130px;
+  background-color: $light-gray;
 }
 .confirmCount, .activeCount, .recoveredCount, .deceasedCount, .totalCount{
   width: 80px;
+  color: $dimGray;
+  position: relative;
   @include tableCard;
+  background-color: $whiteSmoke;
+  text-align: right;
 }
+.stateName:hover ~.confirmCount{
+  background-color: $light-gray;
+}
+.stateName:hover ~.activeCount{
+  background-color: $light-gray;
+}
+.stateName:hover ~.recoveredCount{
+  background-color: $light-gray;
+}
+.stateName:hover ~.deceasedCount{
+  background-color: $light-gray;
+}
+.stateName:hover ~.totalCount{
+  background-color: $light-gray;
+}
+    
+
+//table row class

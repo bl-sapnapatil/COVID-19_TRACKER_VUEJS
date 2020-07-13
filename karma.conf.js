@@ -9,7 +9,7 @@ module.exports = function (config) {
 		],
 		reporters: ['spec'],
 		preprocessors: {
-			'test/unit/**/*.js': ['browserify']
+			'test/unit/**.js': ['browserify']
 		},
 		browserify: {
 			debug: true,

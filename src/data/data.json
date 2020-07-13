@@ -1,18 +1,4 @@
-[
-	{
-		"active": "270551",
-		"confirmed": "768345",
-		"deaths": "21144",
-		"deltaconfirmed": "24852",
-		"deltadeaths": "491",
-		"deltarecovered": "19505",
-		"lastupdatedtime": "08/07/2020 23:13:25",
-		"migratedother": "100",
-		"recovered": "476550",
-		"state": "Total",
-		"statecode": "TT",
-		"statenotes": ""
-	}, 	
+[ 	
 	{
 		"active": "91065",
 		"confirmed": "223724",

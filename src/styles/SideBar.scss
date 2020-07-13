@@ -25,5 +25,16 @@
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: $white;
+  background-color: #f6f6f7;
+}
+
+::v-deep  .v-list-item {
+align-items: center;
+flex: 11 11 100%;
+letter-spacing: normal;
+min-height: 40px;
+outline: none;
+padding: 0 16px;
+position: relative;
+text-decoration: none;
 }
