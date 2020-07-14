@@ -13,7 +13,7 @@
         <p>
           <span class="cardtag">Confirmed</span>
           <span>+127</span>
-          <span class="count">543897</span>
+          <span class="count">5,43,897</span>
           <trend
             class="trend"
             :data="[7, 3, 5, 6, 7, 8, 6, 5, 7, 8, 9, 7, 10, 12, 15]"
@@ -28,7 +28,7 @@
         <p>
           <span class="cardtag">Active</span>
           <span>+1530</span>
-          <span class="count">657488</span>
+          <span class="count">6,57,488</span>
           <trend
             class="trend"
             :data="[0, 3, 2, 4, 5, 6, 8, 4, 7, 9, 5, 6, 6, 7]"
@@ -43,7 +43,7 @@
         <p>
           <span class="cardtag">Recovered</span>
           <span>+2000</span>
-          <span class="count">254555</span>
+          <span class="count">2,54,555</span>
           <trend
             class="trend"
             :data="[5, 3, 4, 5, 6, 3, 2, 3, 2, 4, 5, 7, 8, 5, 9, 10]"
@@ -58,7 +58,7 @@
         <p>
           <span class="cardtag">Deceased</span>
           <span>+45</span>
-          <span class="count">18214</span>
+          <span class="count">18,214</span>
           <trend
             class="trend"
             :data="[0.2, 0.4, 0.5, 0.7, 1, 1.3, 1.5, 1, 1.5, 1, 1.5, 1, 1.5]"
@@ -69,6 +69,33 @@
           </trend>
         </p>
       </div>
+    </div>
+    <div>
+      <img
+        class="iconsontable"
+        src="../assets/building.svg"
+        alt=""
+        width="28px"
+        height="28px"
+      />
+      <!-- <span class="iconsontable">Unassigned</span> -->
+      <v-btn icon class="iconsontable"><span >1M</span></v-btn>
+      <v-btn icon class="iconsontable"><span @click="showInfoTable()" > ? </span></v-btn>
+      <div class="helptable" v-show="helptable">
+        <p>
+        <span class="tablecontent" ><img
+        src="../assets/building.svg"
+        width="30px"
+        height="30px"
+      /> Toggle between States/Districts</span>
+        <span class="tablecontent"><v-icon class="iconinhelp">mdi-filter-outline</v-icon> Toggle between States/Districts</span>
+        <span class="tablecontent"><v-icon class="iconinhelp">mdi-sort-descending</v-icon>  Sort By Descending</span>
+        <span class="tablecontent"><v-icon class="iconinhelp">mdi-sort-ascending</v-icon>  Sort By Ascending</span>
+        <span class="tablecontent"> <v-icon class="iconinhelp">mdi-sort-ascending</v-icon> Sort By Delta [ Long Press ]</span>
+        <span class="tablecontent"><v-icon class="iconinhelp">mdi-information-outline</v-icon> Notes </span>
+        </p>
+      </div>
+      
     </div>
     <div>
       <div class="tabletitles">

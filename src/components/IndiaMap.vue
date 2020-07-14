@@ -232,6 +232,7 @@
   </div>
 </template>
 <script>
+import axios from 'axios';
 import covidData from "../data/data.json";
 export default {
   name: "IndiaCOVIDMap",
@@ -240,7 +241,8 @@ export default {
       covidPatientsData: covidData,
       statename: "",
       statecode:"",
-      totalCases:""
+      totalCases:"",
+      R:","
     };
   },
   methods: {
@@ -258,7 +260,10 @@ export default {
   mounted() {
     this.statename="India"
     this.totalCases="6670251"
-    console.log("API URL From .env file :: "+process.env.ROOT_API)
+    axios.get('https://api.covid19india.org/data.json').then((response) => {
+        this.R = response.data.statewise;
+      })
+      console.log(">>>>>>>>>>>>>>>>>>>>"+this.R)
   },
   created(){
   }

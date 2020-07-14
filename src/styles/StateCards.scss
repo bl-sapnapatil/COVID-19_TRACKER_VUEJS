@@ -44,11 +44,6 @@ body {
   color: $gray;
   margin-left: 35%;
 }
-.iconsontable{
-  padding: 5px;
-  margin-left: 15px;
-  background-color: $dimgray;
-}
 .main-overview {
   padding: 20px;
   margin-top: 22px;
@@ -101,13 +96,31 @@ body {
 p span {
   display: block;
 }
+.iconsontable{
+  padding: 5px;
+  margin-left: 15px;
+  color: darkgoldenrod;
+  background-color: $dimgray;
+}
 .helptable{
-  padding: 10px;
+  padding: 5px;
   margin-left: 15px;
   margin-top: 10px;
+  font-size: 10px;
   border-radius: 5px;
-  background-color: $light-gray;
-  width: 50%;
+  color: $dimGray;
+  background-color: $whiteSmoke;
+  width: 94%;
+}
+.tablecontent{
+  margin: 8px;
+  padding-left: 10px;
+}
+.tablecontent img{
+  padding-right: 7px;
+}
+.iconinhelp{
+  padding-right: 7px;
 }
 .tableContainer{
   color: $dimgray;
