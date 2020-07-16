@@ -9,10 +9,7 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item
-            v-for="(item, index) in items"
-            :key="index"
-          >
+          <v-list-item v-for="(item, index) in items" :key="index">
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -25,15 +22,29 @@
     <div class="indiamap">
       <Map />
     </div>
+    <div class="graphactions">
+      <h1>Spread Trends</h1>
+        <span @click="undefinedFunction()" class="cumulative">
+        Cumulative
+      </span>
+        <span @click="undefinedFunction()" class="daily">
+        Daily
+      </span>
+    </div>
+    <div>
+      <Graphs />
+    </div>
   </div>
 </template>
 <script>
-import Map from './IndiaMap'
-import stateNames from '../data/states.json'
+import Map from "./DistrictMap";
+import Graphs from "./Graphs";
+import stateNames from "../data/states.json";
 export default {
   name: "AllCasesInIndia",
-  components:{
+  components: {
     Map,
+    Graphs,
   },
   data() {
     return {

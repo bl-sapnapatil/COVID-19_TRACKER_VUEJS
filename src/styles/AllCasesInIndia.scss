@@ -1,4 +1,5 @@
 @import '../scss/colors.scss';
+@import '../scss//mixins.scss';
 
 @font-face{
   font-family :'Archia-Regular';
@@ -6,7 +7,7 @@
 }
 *{
   font-family :'Archia-Regular';
-  font-weight: 1000;
+  font-weight: bolder;
 }
 .md-menu {
   margin: 10%;
@@ -21,4 +22,29 @@
 }
 .indiamap{
   margin:22px
+}
+h1{
+  padding-left: 35%;
+  color: $dimGray;
+  margin-bottom: 20px;
+}
+.graphactions{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.cumulative{
+  border-radius: 5px;
+  width: 100px;
+  margin: 5px;
+  color: $dimGray;
+  padding: 15px;
+  background-color: $whiteSmoke;
+}
+.daily{
+  border-radius: 5px;
+  margin: 5px;
+  width: 70px;
+  padding: 15px;
+  color: $dimGray;
+  background-color: $whiteSmoke;
 }
