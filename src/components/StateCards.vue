@@ -12,8 +12,8 @@
       <div class="confirmed">
         <p>
           <span class="cardtag">Confirmed</span>
-          <span>+127</span>
-          <span class="count">9,70,897</span>
+          <span>+35127</span>
+          <span class="count">10,20,897</span>
           <trend
             class="trend"
             :data="[7, 3, 5, 6, 7, 8, 6, 5, 7, 8, 9, 7, 10, 12, 15]"
@@ -27,7 +27,7 @@
       <div class="active">
         <p>
           <span class="cardtag">Active</span>
-          <span>+1530</span>
+          <span>+2548</span>
           <span class="count">3,37,488</span>
           <trend
             class="trend"
@@ -42,7 +42,7 @@
       <div class="recovered">
         <p>
           <span class="cardtag">Recovered</span>
-          <span>+2000</span>
+          <span>+17570</span>
           <span class="count">6,15,635</span>
           <trend
             class="trend"
@@ -57,7 +57,7 @@
       <div class="deceased">
         <p>
           <span class="cardtag">Deceased</span>
-          <span>+45</span>
+          <span>+685</span>
           <span class="count">24,928</span>
           <trend
             class="trend"
@@ -71,62 +71,21 @@
       </div>
     </div>
     <div>
-      <img
-        class="iconsontable"
-        src="../assets/building.svg"
-        alt=""
-        width="28px"
-        height="28px"
-      />
-      <!-- <span class="iconsontable">Unassigned</span> -->
-      <v-btn icon class="iconsontable"><span >1M</span></v-btn>
-      <v-btn icon class="iconsontable"><span @click="showInfoTable()" > ? </span></v-btn>
-      <div class="helptable" v-show="helptable">
-        <p>
-        <span class="tablecontent" ><img
-        src="../assets/building.svg"
-        width="30px"
-        height="30px"
-      /> Toggle between States/Districts</span>
-        <span class="tablecontent"><v-icon class="iconinhelp">mdi-filter-outline</v-icon> Patients per 1 Million Population</span>
-        <span class="tablecontent"><v-icon class="iconinhelp">mdi-sort-descending</v-icon>  Sort By Descending</span>
-        <span class="tablecontent"><v-icon class="iconinhelp">mdi-sort-ascending</v-icon>  Sort By Ascending</span>
-        <span class="tablecontent"> <v-icon class="iconinhelp">mdi-sort-ascending</v-icon> Sort By Delta [ Long Press ]</span>
-        <span class="tablecontent"><v-icon class="iconinhelp">mdi-information-outline</v-icon> Notes </span>
-        </p>
-      </div>
-      
+     <InformatoryHelp />
     </div>
     <div>
-      <div class="tabletitles">
-        <span class="tabletitlestate">State/UT</span>
-        <span class="tabletitleC">C</span>
-        <span class="tabletitleA">A</span>
-        <span class="tabletitleR">R</span>
-        <span class="tabletitleD">D</span>
-        <span class="tabletitleT">T</span>
-      </div>
-      <v-container class="tableContainer">
-        <v-layout
-          class="tablerow"
-          v-for="data in covidPatientData"
-          :key="data.statecode"
-        >
-          <span class="stateName">{{ data.state }}</span>
-          <span class="confirmCount">{{ data.confirmed }}</span>
-          <span class="activeCount">{{ data.active }}</span>
-          <span class="recoveredCount">{{ data.recovered }}</span>
-          <span class="deceasedCount">{{ data.deaths }}</span>
-          <span class="totalCount">{{ data.confirmed }}</span>
-        </v-layout>
-      </v-container>
+      <state-counts-table />
     </div>
   </div>
 </template>
 <script>
-import covidData from "../data/data.json";
+import StateCountsTable from "./StateCountsTable.vue";
+import InformatoryHelp from "./InformatoryHelp.vue"
 export default {
   name: "StateCards",
+  components: {
+    StateCountsTable,InformatoryHelp
+  },
   data() {
     return {
       covidPatientData: [],
@@ -180,11 +139,10 @@ export default {
     },
   },
   mounted() {
-    this.covidPatientData = covidData;
     this.date = this.showDate();
   },
 };
 </script>
 <style lang="scss" scoped>
-@import "../styles/StateCards.scss";
+@import "../styles/StateCards.sass";
 </style>

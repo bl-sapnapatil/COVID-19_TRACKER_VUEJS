@@ -1,0 +1,104 @@
+@import ../scss/colors.sass
+@import ../scss/mixins.sass
+
+@font-face
+  font-family: 'Archia-Regular'
+  src: url("../../public/fonts/Archia-Regular.woff")
+
+*
+  font-family: 'Archia-Regular'
+  font-weight: 1200                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       00
+
+.searchTitle
+  color: $dimGray
+  display: flex
+  justify-content: center
+  padding-bottom: 3%
+  border: none
+  outline: none
+
+.searchDiv
+  border-radius: 7px
+  background: $white
+  height: 58px
+  margin-left: 5%
+  width: 90%
+  box-shadow: 1px 1px 1px 1px $dimGray
+  margin-bottom: 4%
+  border: none
+  outline: $white
+
+.search
+  background: $white
+  height: 40px
+  padding-top: 3%
+  padding-left: 2%
+  font-size: 15px
+  border: none
+  outline: none
+
+.showdatetime
+  color: $gray
+  margin-left: 35%
+
+.main-overview
+  padding: 20px
+  margin-top: 22px
+  text-align: center
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(100px, 7fr))
+  grid-gap: 4px
+
+.confirmed
+  +PatientCountCard
+
+  color: $red
+
+  \:hover
+    border-radius: 7px
+    background-color: $dim-red
+
+.active
+  +PatientCountCard
+
+  color: $blue
+
+  \:hover
+    border-radius: 7px
+    background-color: $light-blue
+
+.recovered
+  +PatientCountCard
+
+  color: $green
+
+  \:hover
+    border-radius: 7px
+    background-color: $light-green
+
+.deceased
+  +PatientCountCard
+
+  color: $gray
+
+  \:hover
+    border-radius: 7px
+    background-color: $dimgray
+
+.cardtag
+  padding: 12px
+  font-size: 12px
+
+.count
+  padding-top: 7px
+  font-size: 25px
+
+p span
+  display: block
+
+.trend
+  margin-top: 20px
+  padding: 3px
+  padding-bottom: 20px
+
+//table row class

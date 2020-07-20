@@ -22,15 +22,6 @@
     <div class="indiamap">
       <Map />
     </div>
-    <div class="graphactions">
-      <h1>Spread Trends</h1>
-        <span @click="undefinedFunction()" class="cumulative">
-        Cumulative
-      </span>
-        <span @click="undefinedFunction()" class="daily">
-        Daily
-      </span>
-    </div>
     <div>
       <Graphs />
     </div>
@@ -53,11 +44,13 @@ export default {
       items: stateNames,
     };
   },
+  methods: {
+  },
   mounted() {
     this.date = new Date();
   },
 };
 </script>
 <style lang="scss" scoped>
-@import "../styles/AllCasesInIndia.scss";
+@import "../styles/AllCasesInIndia.sass";
 </style>
