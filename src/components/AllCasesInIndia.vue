@@ -1,10 +1,10 @@
 <template>
   <div class="homeright">
     <h1>{{ msg }}</h1>
-    <div class="indiaButton">
-      <v-menu class="myDropDown">
+    <div>
+      <v-menu>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn x-large text v-bind="attrs" v-on="on">
+          <v-btn text v-bind="attrs" v-on="on">
             India
           </v-btn>
         </template>
@@ -22,7 +22,7 @@
     <div class="indiamap">
       <Map />
     </div>
-    <div>
+    <div class="indiamap">
       <Graphs />
     </div>
   </div>
@@ -52,5 +52,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../styles/AllCasesInIndia.sass";
+@import "../styles/AllCasesInIndia.scss";
 </style>

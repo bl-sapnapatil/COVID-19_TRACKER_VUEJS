@@ -1,0 +1,120 @@
+@import '../scss/colors.scss';
+@import '../scss/mixins.scss';
+
+@font-face {
+    font-family :'Archia-Regular';
+    src: url('../../public/fonts/Archia-Regular.woff');
+  }
+  *{
+    font-family :'Archia-Regular';
+    font-weight: 1200                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  00;
+  }
+  .tableContainer{
+    color: $dimgray;
+    transition: all 600ms ease-in-out 50ms;
+    width: 550px;
+    overflow-x: auto;
+  }
+  @media (max-width: 700px) {
+    .tableContainer {
+      width: 400px;
+    }
+  }
+  .tabletitles{
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-bottom: 10px;;
+  }
+  @media (max-width: 700px) {
+    .tabletitles {
+      margin-top: 20px;
+      width: 450px;
+      margin-bottom: 5px;
+      margin-left: 0px;
+      font-size: 90%;
+    }
+  }
+  .tabletitlestate{
+    margin: 2px;
+    padding: 8px;
+    padding-right: 57px;
+    border-radius: 3px;
+    background-color: $light-gray;
+    color: $dimGray;
+  }
+  @media (max-width: 700px) {
+    .tabletitlestate {
+      padding: 6px;
+      padding-right: 42px;
+      font-size: 90%;
+      margin: 1px;
+    }
+  }
+  .tabletitleC, .tabletitleA, .tabletitleR, .tabletitleD, .tabletitleT{
+    padding: 8px;
+    margin: 2px;
+    padding-left: 62px;
+    color: $dimGray;
+    background-color: $light-gray;
+    border-radius: 3px;
+  }
+  @media (max-width: 700px) {
+    .tabletitleC,
+    .tabletitleA,
+    .tabletitleR,
+    .tabletitleD,
+    .tabletitleT {
+      padding: 6px;
+      padding-left: 31px;
+      font-size: 90%;
+      margin: 1px;
+    }
+  }
+  .stateName{
+    color: $dimGray;
+    @include tableCard;
+    width: 130px;
+    background-color: $light-gray;
+  }
+  @media (max-width: 700px) {
+    .stateName {
+      width: 25%;
+      font-size: 70%;
+      margin: 1px;
+    }
+  }
+  .confirmCount, .activeCount, .recoveredCount, .deceasedCount, .totalCount{
+    width: 80px;
+    color: $dimGray;
+    position: relative;
+    @include tableCard;
+    background-color: $whiteSmoke;
+    text-align: right;
+  }
+  @media (max-width: 700px) {
+    .confirmCount,
+    .activeCount,
+    .recoveredCount,
+    .deceasedCount,
+    .totalCount {
+      width: 45px;
+      font-size: 60%;
+      padding: 8px;
+      margin: 1px;
+    }
+  }
+  .stateName:hover ~.confirmCount{
+    background-color: $light-gray;
+  }
+  .stateName:hover ~.activeCount{
+    background-color: $light-gray;
+  }
+  .stateName:hover ~.recoveredCount{
+    background-color: $light-gray;
+  }
+  .stateName:hover ~.deceasedCount{
+    background-color: $light-gray;
+  }
+  .stateName:hover ~.totalCount{
+    background-color: $light-gray;
+  }

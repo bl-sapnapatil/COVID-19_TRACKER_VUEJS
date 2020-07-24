@@ -9,7 +9,15 @@ import Trend from 'vuetrend';
 import MenuIcon from 'vue-material-design-icons/Menu.vue';
 import Chartkick from 'vue-chartkick'
 import Chart from 'chart.js'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+import $ from 'jquery'
 
+// You can use it now
+$('body').css('background-color', 'SmokeWhite');
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
 Vue.use(Chartkick.use(Chart))
 Vue.component('menu-icon', MenuIcon);
 Vue.use(Trend);

@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <div class="tabletitles">
+  <div class="table">
+    
+    <div class="tableContainer">
+      <div class="tabletitles">
       <span class="tabletitlestate">State/UT</span>
       <span class="tabletitleC">C</span>
       <span class="tabletitleA">A</span>
@@ -8,20 +10,18 @@
       <span class="tabletitleD">D</span>
       <span class="tabletitleT">T</span>
     </div>
-    <v-container class="tableContainer">
       <v-layout
-        class="tablerow"
         v-for="data in covidPatientData"
         :key="data.statecode"
       >
-        <span class="stateName">{{ data.state }}</span>
-        <span class="confirmCount">{{ data.confirmed }}</span>
-        <span class="activeCount">{{ data.active }}</span>
-        <span class="recoveredCount">{{ data.recovered }}</span>
-        <span class="deceasedCount">{{ data.deaths }}</span>
-        <span class="totalCount">{{ data.confirmed }}</span>
+        <div class="stateName">{{ data.state }}</div>
+        <div class="confirmCount">{{ data.confirmed }}</div>
+        <div class="activeCount">{{ data.active }}</div>
+        <div class="recoveredCount">{{ data.recovered }}</div>
+        <div class="deceasedCount">{{ data.deaths }}</div>
+        <div class="totalCount">{{ data.confirmed }}</div>
       </v-layout>
-    </v-container>
+    </div>
     <input type="text" v-model="message" />
   </div>
 </template>
@@ -29,7 +29,7 @@
 import covidData from "../data/data.json";
 export default {
     name:'StateCountsTable',
-     data() {
+    data() {
     return {
       covidPatientData: [],
       message:"Data To Check Watchers",
@@ -48,5 +48,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import "../styles/StateCountsTable.sass";
+@import "../styles/StateCountsTable.scss";
 </style>

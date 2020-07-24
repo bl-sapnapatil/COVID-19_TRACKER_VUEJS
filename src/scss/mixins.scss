@@ -1,0 +1,20 @@
+@import './colors.scss';
+
+@mixin PatientCountCard {
+    margin:2px;
+}
+@media (max-width: 700px) {
+    @mixin PatientCountCard {
+        margin:1px;
+        width: 100%;
+    }
+}
+@mixin tableCard {
+    padding: 8px;
+    margin:2px;
+    font-size:13px;
+    border-radius: 3px;
+    :hover{
+        background-color: $light-gray;
+    }
+}

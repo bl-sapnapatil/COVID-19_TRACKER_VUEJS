@@ -1,0 +1,48 @@
+@import "../scss/colors.scss";
+
+@font-face {
+  font-family: "Archia-Regular";
+  src: url("../../public/fonts/Archia-Regular.woff") format("woff");
+}
+* {
+  font-family: "Archia-Regular";
+  font-weight: 1000;
+}
+h1 {
+  padding-left: 35%;
+  color: $dimGray;
+  margin-bottom: 40px;
+}
+.graphactions {
+}
+.cumulative {
+  border-radius: 5px;
+  width: 100px;
+  margin: 5px;
+  color: $dimGray;
+  padding: 15px;
+  background-color: $whiteSmoke;
+}
+.daily {
+  border-radius: 5px;
+  margin: 5px;
+  width: 70px;
+  padding: 15px;
+  color: $dimGray;
+  background-color: $whiteSmoke;
+}
+.graphs {
+  margin-top: 10px;
+  height: 100px;
+}
+
+.confirmedgraph, .activegraph, .recoveredgraph, .deceasedgraph, .totalgraph {
+  width: 500px;
+  height: 80px;
+}
+@media (max-width:768px){
+  .confirmedgraph, .activegraph, .recoveredgraph, .deceasedgraph, .totalgraph {
+    width: 360px;
+    height: 80px;
+  }
+}

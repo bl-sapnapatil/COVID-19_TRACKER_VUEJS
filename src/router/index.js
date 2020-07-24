@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Dashboard from "../components/SideBar";
 import Home from "../components/Home.vue";
-import DistictMap from "../components/DistrictMap.vue"
+import SideBar from "../components/Side.vue";
 
 Vue.use(VueRouter);
 
@@ -15,20 +15,20 @@ const routes = [
       {
         path: "",
         name: "Home",
-        component: Home
-      }
-    ]
+        component: Home,
+      },
+    ],
   },
   {
-    path:"/map",
-    name:"DistictMap",
-    component:DistictMap
-  }
+    path: "/side",
+    name: "SideBar",
+    component: SideBar,
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
-  routes
+  routes,
 });
 
 export default router;

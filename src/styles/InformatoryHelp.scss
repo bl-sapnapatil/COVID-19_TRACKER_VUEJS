@@ -1,0 +1,41 @@
+@import '../scss/colors.scss';
+@import '../scss/mixins.scss';
+
+@font-face {
+  font-family :'Archia-Regular';
+  src: url('../../public/fonts/Archia-Regular.woff');
+}
+*{
+  font-family :'Archia-Regular';
+  font-weight: 1200                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       00;
+}
+p span {
+    display: block;
+  }
+  
+.iconsontable{
+  padding: 5px;
+  margin-left: 15px;
+  color: darkgoldenrod;
+  background-color: $dimgray;
+}
+.helptable{
+  padding: 5px;
+  margin-left: 15px;
+  margin-top: 10px;
+  font-size: 10px;
+  border-radius: 5px;
+  color: $dimGray;
+  background-color: $whiteSmoke;
+  width: 94%;
+}
+.tablecontent{
+  margin: 8px;
+  padding-left: 10px;
+}
+.tablecontent img{
+  padding-right: 7px;
+}
+.iconinhelp{
+  padding-right: 7px;
+}

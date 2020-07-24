@@ -1,8 +1,9 @@
 <template>
   <div class="homeleft">
+    <div class="statecards">
     <div class="searchTitle">Search your district or state</div>
     <div class="searchDiv">
-      <img style="padding-left:1%" src="../assets/searchIcon.png" />
+      <img src="../assets/searchIcon.png" />
       <input class="search" placeholder="Search" autocomplete="off" />
     </div>
     <div>
@@ -12,7 +13,7 @@
       <div class="confirmed">
         <p>
           <span class="cardtag">Confirmed</span>
-          <span>+35127</span>
+          <span class="incresedecrease">+35127</span>
           <span class="count">10,20,897</span>
           <trend
             class="trend"
@@ -27,7 +28,7 @@
       <div class="active">
         <p>
           <span class="cardtag">Active</span>
-          <span>+2548</span>
+          <span class="incresedecrease">+2548</span>
           <span class="count">3,37,488</span>
           <trend
             class="trend"
@@ -42,7 +43,7 @@
       <div class="recovered">
         <p>
           <span class="cardtag">Recovered</span>
-          <span>+17570</span>
+          <span class="incresedecrease">+17570</span>
           <span class="count">6,15,635</span>
           <trend
             class="trend"
@@ -57,7 +58,7 @@
       <div class="deceased">
         <p>
           <span class="cardtag">Deceased</span>
-          <span>+685</span>
+          <span class="incresedecrease">+685</span>
           <span class="count">24,928</span>
           <trend
             class="trend"
@@ -69,6 +70,7 @@
           </trend>
         </p>
       </div>
+    </div>
     </div>
     <div>
      <InformatoryHelp />
@@ -144,5 +146,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../styles/StateCards.sass";
+@import "../styles/StateCards.scss";
 </style>

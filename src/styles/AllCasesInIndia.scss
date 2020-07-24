@@ -1,0 +1,32 @@
+@import '../scss/colors.scss';
+@import '../scss/mixins.scss';
+
+@font-face{
+  font-family :'Archia-Regular';
+  src: url('../../public/fonts/Archia-Regular.woff') format('woff');
+}
+*{
+  font-family :'Archia-Regular';
+  font-weight: bolder;
+}
+.md-menu {
+  margin: 10%;
+}
+.v-list {
+  height: 300px;
+  overflow-y: auto;
+}
+.lastupdated{
+  margin-left:15px;
+  margin-bottom:20px;
+}
+.indiamap{
+  width: 500px;
+  margin:22px
+}
+@media (max-width:768px){
+  .indiamap{
+    width: 300px;
+    margin:5px
+  }
+}

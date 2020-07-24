@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div class="graphactions">
-      <h1>Spread Trends</h1>
+    <div  class="titleongraph">
+      <v-title>Spread Trends</v-title>
+    </div>
+      <div class="graphactions">
       <span v-on:click="displaynumbers" class="cumulative">
         Cumulative
       </span>
@@ -10,42 +12,51 @@
       </span>
     </div>
     <div class="graphs">
-      <span>{{ message }}</span>
-      <v-card flat class="confirmedgraph">
-        <v-card-title>Confirmed</v-card-title>
+      <v-card flat >
+        <span class="graphtitle">Confirmed</span>
         <apexchart
           type="line"
-          height="250"
+          class="confirmedgraph"
           :options="confirmedChartOptions"
           :series="confirmedData"
         ></apexchart>
       </v-card>
-      <v-card flat class="activegraph">
-        <v-card-title>Active</v-card-title>
+      <v-card flat >
+        <span class="graphtitle">Active</span>
         <apexchart
           type="line"
-          height="250"
+          class="activegraph"
           :options="activeChartOptions"
           :series="activeData"
         ></apexchart>
       </v-card>
-      <v-card flat class="recoveredgraph">
-        <v-card-title>Recovered</v-card-title>
+      <v-card flat >
+        <span class="graphtitle">Recovered</span>
         <apexchart
           type="line"
-          height="250"
+          class="recoveredgraph"
           :options="recoveredChartOptions"
           :series="recoveredData"
         ></apexchart>
       </v-card>
-      <v-card flat class="deceasedgraph">
-        <v-card-title>Deceased</v-card-title>
+      <v-card flat >
+        <span class="graphtitle">Deceased</span>
         <apexchart
           v-model="deceasedgraph"
           type="line"
-          height="250"
+          class="deceasedgraph"
           :options="deceasedChartOptions"
           :series="deceasedData"
+        ></apexchart>
+      </v-card>
+      <v-card flat >
+        <span class="graphtitle">Total</span>
+        <apexchart
+          v-model="totalgraph"
+          type="line"
+          class="totalgraph"
+          :options="totalChartOptions"
+          :series="totalData"
         ></apexchart>
       </v-card>
     </div>
@@ -68,7 +79,7 @@ export default {
       confirmedData: [
         {
           name: "Confirmed",
-          data: [100, 3978, 53000, 107650, 245687, 768972, 1028462],
+          data: [107650, 245687, 768972, 1028462],
         },
       ],
       confirmedChartOptions: {
@@ -82,13 +93,13 @@ export default {
           colors: "#FF0000",
         },
         xaxis: {
-          categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+          categories: ["Apr", "May", "Jun", "Jul"],
         },
       },
       activeData: [
         {
           name: "Active",
-          data: [50, 368, 1489, 18624, 50487, 98787, 248462],
+          data: [18624, 50487, 98787, 248462],
         },
       ],
       activeChartOptions: {
@@ -102,13 +113,13 @@ export default {
           colors: "#0000FF",
         },
         xaxis: {
-          categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+          categories: ["Apr", "May", "Jun", "Jul"],
         },
       },
       recoveredData: [
         {
           name: "Recovered",
-          data: [100, 4587, 8459, 19874, 36874, 168972, 528462],
+          data: [19874, 36874, 168972, 528462],
         },
       ],
       recoveredChartOptions: {
@@ -122,14 +133,14 @@ export default {
           colors: "#2E8B57",
         },
         xaxis: {
-          categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+          categories: ["Apr", "May", "Jun", "Jul"],
         },
       },
 
       deceasedData: [
         {
           name: "Deceased",
-          data: [5, 45, 174, 898, 5540, 17045, 24245],
+          data: [898, 5540, 16045, 24245],
         },
       ],
       deceasedChartOptions: {
@@ -143,7 +154,27 @@ export default {
           colors: "#696969",
         },
         xaxis: {
-          categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+          categories: ["Apr", "May", "Jun", "Jul"],
+        },
+      },
+      totalData: [
+        {
+          name: "Total",
+          data: [107650, 345687, 898972, 1128462],
+        },
+      ],
+      totalChartOptions: {
+        chart: {
+          zoom: {
+            enabled: false,
+          },
+        },
+        stroke: {
+          curve: "smooth",
+          colors: "#FF0000",
+        },
+        xaxis: {
+          categories: ["Apr", "May", "Jun", "Jul"],
         },
       },
     };
@@ -154,43 +185,19 @@ export default {
       alert((this.total = this.num1 + this.num2));
     },
     changeToDailyCount: function() {
-      let confirmedPatientsData = [
-        890412,
-        914352,
-        935608,
-        956741,
-        965874,
-        1011589,
-        1248410,
-      ];
+      let confirmedPatientsData = [956741, 965874, 1011589, 1248410];
       this.confirmedData = [
         {
           data: confirmedPatientsData,
         },
       ];
-      let activePatientsData = [
-        84412,
-        91352,
-        93608,
-        95741,
-        96874,
-        100589,
-        128410,
-      ];
+      let activePatientsData = [95741, 96874, 100589, 128410];
       this.activeData = [
         {
           data: activePatientsData,
         },
       ];
-      let recoveredPatientsData = [
-        4412,
-        9352,
-        15608,
-        16674,
-        17574,
-        20589,
-        22841,
-      ];
+      let recoveredPatientsData = [16674, 17574, 20589, 22841];
       this.recoveredData = [
         {
           data: recoveredPatientsData,
@@ -202,15 +209,7 @@ export default {
           data: deceasedPatientsData,
         },
       ];
-      this.xaxis = [
-        "14 Jul",
-        "15 Jul",
-        "16 Jul",
-        "17 Jul",
-        "18 Jul",
-        "19 Jul",
-        "20 Jul",
-      ];
+      this.xaxis = ["17 Jul", "18 Jul", "19 Jul", "20 Jul", "21 Jul"];
       this.confirmedData.confirmedChartOptions.xaxis = [
         {
           categories: this.xaxis,
@@ -236,6 +235,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../styles/Graphs.sass";
+@import "../styles/Graphs.scss";
 </style>
-
