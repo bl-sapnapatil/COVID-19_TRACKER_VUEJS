@@ -52,5 +52,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../styles/AllCasesInIndia.scss";
+@import "../styles/AllCasesInIndia.sass";
 </style>

@@ -69,5 +69,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../styles/SideBar.scss";
+@import "../styles/SideBar.sass";
 </style>

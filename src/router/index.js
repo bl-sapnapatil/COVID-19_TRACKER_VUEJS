@@ -2,7 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Dashboard from "../components/SideBar";
 import Home from "../components/Home.vue";
-import SideBar from "../components/Side.vue";
 
 Vue.use(VueRouter);
 
@@ -18,11 +17,6 @@ const routes = [
         component: Home,
       },
     ],
-  },
-  {
-    path: "/side",
-    name: "SideBar",
-    component: SideBar,
   },
 ];
 

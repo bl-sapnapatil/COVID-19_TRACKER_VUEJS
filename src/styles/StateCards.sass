@@ -1,0 +1,151 @@
+@import ../scss/colors.sass
+@import ../scss/mixins.sass
+
+@font-face
+  font-family: "Archia-Regular"
+  src: url("../../public/fonts/Archia-Regular.woff")
+
+*
+  font-family: "Archia-Regular"
+  font-weight: 1200 00
+
+.searchTitle
+  color: $dimGray
+  display: flex
+  justify-content: center
+  padding-bottom: 3%
+  border: none
+  outline: none
+
+.homeleft
+  width: 100%
+
+.statecards
+  width: 100%
+
+.searchDiv
+  border-radius: 7px
+  background: $white
+  height: 58px
+  margin-left: 2%
+  width: 100%
+  box-shadow: 1px 1px 1px 1px $dimGray
+  margin-bottom: 4%
+  border: none
+  outline: $white
+
+.search
+  background: $white
+  height: 40px
+  padding-top: 3%
+  padding-left: 2%
+  font-size: 15px
+  border: none
+  outline: none
+
+@media (max-width: 700px)
+  .searchTitle
+    color: $dimGray
+    font-size: 10px
+    align-content: center
+    padding-bottom: 1%
+
+  .searchDiv
+    margin-left: 1%
+    height: 30%
+    width: 100%
+
+  .search
+    padding-top: 1%
+    font-size: 12px
+
+.showdatetime
+  color: $gray
+  margin-left: 35%
+
+@media (max-width: 700px)
+  .showdatetime
+    margin-left: 34%
+    font-size: 10px
+
+.main-overview
+  margin-top: 22px
+  text-align: center
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(60px, 5fr))
+  grid-gap: 4px
+
+.confirmed
+  color: $red
+
+  \:hover
+    border-radius: 7px
+    background-color: $dim-red
+
+.active
+  color: $blue
+
+  \:hover
+    border-radius: 7px
+    background-color: $light-blue
+
+.recovered
+  color: $green
+
+  \:hover
+    border-radius: 7px
+    background-color: $light-green
+
+.deceased
+  color: $gray
+
+  \:hover
+    border-radius: 7px
+    background-color: $dimgray
+
+.cardtag
+  padding: 5px
+  padding-top: 7px
+  font-size: 15px
+
+.incresedecrease
+  padding: 2px
+  font-size: 12px
+
+.count
+  padding-top: 4px
+  font-size: 24px
+
+.trend
+  margin-top: 15px
+  padding: 3px
+  padding-bottom: 15px
+
+@media (max-width: 700px)
+  .cardtag
+    padding: 5px
+    padding-top: 7px
+    font-size: 10px
+
+  .incresedecrease
+    padding: 2px
+    font-size: 9px
+
+  .count
+    padding-top: 4px
+    font-size: 15px
+
+  .trend
+    margin-top: 10px
+    padding: 3px
+    padding-bottom: 15px
+
+p span
+  display: block
+
+.helpcard
+  margin-left: 25px
+
+@media (max-width: 700px)
+  .helpcard
+    margin-left: 15px

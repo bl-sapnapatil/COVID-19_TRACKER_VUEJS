@@ -146,5 +146,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../styles/StateCards.scss";
+@import "../styles/StateCards.sass";
 </style>

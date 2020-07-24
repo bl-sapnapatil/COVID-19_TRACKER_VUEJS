@@ -235,5 +235,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../styles/Graphs.scss";
+@import "../styles/Graphs.sass";
 </style>

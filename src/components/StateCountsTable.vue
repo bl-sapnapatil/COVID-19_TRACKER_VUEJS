@@ -48,5 +48,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import "../styles/StateCountsTable.scss";
+@import "../styles/StateCountsTable.sass";
 </style>

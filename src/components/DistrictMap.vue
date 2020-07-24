@@ -3248,5 +3248,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../styles/DistrictMap.scss";
+@import "../styles/DistrictMap.sass";
 </style>

@@ -59,5 +59,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../styles/InformatoryHelp.scss";
+@import "../styles/InformatoryHelp.sass";
 </style>
