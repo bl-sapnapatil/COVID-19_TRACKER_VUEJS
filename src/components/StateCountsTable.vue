@@ -1,6 +1,4 @@
 <template>
-  <div class="table">
-    
     <div class="tableContainer">
       <div class="tabletitles">
       <span class="tabletitlestate">State/UT</span>
@@ -21,9 +19,8 @@
         <div class="deceasedCount">{{ data.deaths }}</div>
         <div class="totalCount">{{ data.confirmed }}</div>
       </v-layout>
+          <input type="text" v-model="message" />
     </div>
-    <input type="text" v-model="message" />
-  </div>
 </template>
 <script>
 import covidData from "../data/data.json";

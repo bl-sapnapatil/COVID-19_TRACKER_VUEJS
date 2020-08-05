@@ -11,17 +11,17 @@ import Chartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import $ from 'jquery'
+import dotenv from 'dotenv'
 
-// You can use it now
+dotenv.config()
+
 $('body').css('background-color', 'SmokeWhite');
-// Install BootstrapVue
 Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
+
 Vue.use(IconsPlugin)
 Vue.use(Chartkick.use(Chart))
 Vue.component('menu-icon', MenuIcon);
 Vue.use(Trend);
-require('dotenv').config()
 Vue.use(VueMaterial)
 Vue.config.productionTip = false;
 

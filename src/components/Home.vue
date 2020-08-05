@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="homediv">
     <div class="row">
     <div class="leftcard">
         <Main />
@@ -18,6 +18,9 @@ export default {
     Main,
     MainSide,
   },
+   mounted(){
+      console.log(process.env)
+   }
 };
 </script>
 <style lang="scss" scoped>

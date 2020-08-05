@@ -3242,7 +3242,7 @@ export default {
   },
   mounted() {
     this.statename = "India";
-    this.totalCases = "9710251";
+    this.totalCases = "1636251";
   },
   created() {},
 };
