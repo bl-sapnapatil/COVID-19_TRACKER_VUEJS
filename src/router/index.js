@@ -1,20 +1,28 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Dashboard from "../components/SideBar.vue"
+import Dashboard from "../components/SideBar";
+import Home from "../components/Home.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
     name: "Dashboard",
-    component: Dashboard
+    component: Dashboard,
+    children: [
+      {
+        path: "",
+        name: "Home",
+        component: Home,
+      },
+    ],
   },
- 
 ];
 
 const router = new VueRouter({
-  mode: 'history',
-  routes
+  mode: "history",
+  routes,
 });
 
 export default router;

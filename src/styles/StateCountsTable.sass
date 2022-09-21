@@ -1,0 +1,101 @@
+@import ../scss/colors.sass
+@import ../scss/mixins.sass
+
+@font-face
+  font-family: 'Archia-Regular'
+  src: url("../../public/fonts/Archia-Regular.woff")
+
+*
+  font-family: 'Archia-Regular'
+  font-weight: 1200                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  00
+
+.tableContainer
+  color: $dimgray
+
+.tabletitles
+  margin-top: 20px
+  margin-bottom: 1.3%
+
+.tabletitlestate
+  margin: 1px
+  padding: 8px
+  padding-right: 10.7%
+  border-radius: 3px
+  background-color: $light-gray
+  color: $dimGray
+
+@media (max-width: 700px)
+  .tabletitlestate
+    padding: 6px
+    padding-right: 8.8%
+    font-size: 0.7rem
+    margin: 1px
+
+.tabletitleC, .tabletitleA, .tabletitleR, .tabletitleD, .tabletitleT
+  padding: 8px
+  margin: 2px
+  padding-left: 11.3%
+  color: $dimGray
+  background-color: $light-gray
+  border-radius: 3px
+
+@media (max-width: 700px)
+  .tabletitleC,
+  .tabletitleA,
+  .tabletitleR,
+  .tabletitleD,
+  .tabletitleT
+    padding: 6px
+    padding-left: 8.8%
+    font-size: 0.7rem
+    margin: 1px
+
+.stateName
+  color: $dimGray
+
+  +tableCard
+
+  width: 130px
+  background-color: $light-gray
+
+@media (max-width: 700px)
+  .stateName
+    width: 25%
+    font-size: 70%
+    margin: 1px
+
+.confirmCount, .activeCount, .recoveredCount, .deceasedCount, .totalCount
+  width: 80px
+  color: $dimGray
+  position: relative
+
+  +tableCard
+
+  background-color: $whiteSmoke
+  text-align: right
+
+@media (max-width: 700px)
+  .confirmCount,
+  .activeCount,
+  .recoveredCount,
+  .deceasedCount,
+  .totalCount
+    width: 45px
+    font-size: 60%
+    padding: 8px
+    margin: 1px
+
+.stateName:hover ~ .confirmCount
+  background-color: $light-gray
+
+.stateName:hover ~ .activeCount
+  background-color: $light-gray
+
+.stateName:hover ~ .recoveredCount
+  background-color: $light-gray
+
+.stateName:hover ~ .deceasedCount
+  background-color: $light-gray
+
+.stateName:hover ~ .totalCount
+  background-color: $light-gray

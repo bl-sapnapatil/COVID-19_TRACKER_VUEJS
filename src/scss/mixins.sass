@@ -1,0 +1,18 @@
+@import ./colors.sass
+
+=PatientCountCard
+  margin: 2px
+
+@media (max-width: 700px)
+  =PatientCountCard
+    margin: 1px
+    width: 100%
+
+=tableCard
+  padding: 8px
+  margin: 2px
+  font-size: 13px
+  border-radius: 3px
+
+  \:hover
+    background-color: $light-gray
